@@ -1,0 +1,11 @@
+{
+    "canisters": {
+        "opensourcegardens-cai": {
+            "type": "assets",
+            "source": ["assets"],
+            "frontend": {
+                "entrypoint": "index.en.html"
+            }
+        }
+    }
+ }
