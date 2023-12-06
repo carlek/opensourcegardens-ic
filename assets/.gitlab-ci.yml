@@ -1,0 +1,12 @@
+image: alpine
+
+stages:
+  - deploy
+
+deploy:
+  stage: deploy
+  script:
+    - apk add --no-cache lftp
+    - lftp -e "set ftp:ssl-allow no; mirror --exclude-glob .git* --exclude .git/ --exclude cgi-bin/ --exclude logs/ --exclude matomo.opensourcegardens.info/ --exclude matomostats.opensourcegardens.info/ --exclude notes.opensourcegardens.info/ --exclude usage/ --parallel --no-symlinks -R . /" -u $ftpusername,$ftppw opensourcegardens.info
+  only:
+    - main
