@@ -1,8 +1,29 @@
-# www.opensourcegardens.info
+# www.opensourcegardens.info 
+
+*Update: now on the Internet Computer !!!*
 
 ## About this repository
 
 This repository contains all files necessary to build the web instance https://www.opensourcegardens.info using plain HTML and CSS for now. It also includes a pipeline to deploy the website.
+
+This repository was cloned from the codeberg repo and modified to enable deployment on the Internet Computer.
+
+The codeberg repo:
+https://codeberg.org/opensourcegardens/osg-info-website
+
+The Internet Computer: https://internetcomputer.org
+
+The Foundation for Internet Computer: https://dfinity.org
+
+This repo now allows the Open Source Gardens website to be deployed two ways: 
+
+1.  on Web2 from the `assets` directory
+1.  on the Internet Computer:
+```
+dfx deploy          # local
+dfx deploy --ic     # mainnet
+```
+mainnet:   https://5xuw3-ciaaa-aaaam-ab2ka-cai.icp0.io/
 
 ## Contributing
 
